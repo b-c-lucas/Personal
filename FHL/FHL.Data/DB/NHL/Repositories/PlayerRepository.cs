@@ -1,20 +1,22 @@
 ﻿using FHL.Data.DB.NHL.Entities;
-using System.Collections.Generic;
 using System.Data.Entity;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace FHL.Data.DB.NHL.Repositories
 {
-    public sealed class PlayerRepository : RepositoryBase
+    public sealed class PlayerRepository : RepositoryBase<Player>
     {
         public PlayerRepository(NHLContext context)
             : base(context)
         {
         }
 
-        public async Task<IList<Player>> GetPlayersAsync()
+        protected override DbSet<Player> Set => this.Context.Players;
+
+        public override async Task<IList<Player>> ToListAsync()
         {
-            return await this.Context.Players.ToListAsync();
+            return await this.Set.Include(p => p.Team).ToListAsync();
         }
     }
 }

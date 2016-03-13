@@ -1,4 +1,6 @@
-﻿namespace FHL.Data.Models.NHL
+﻿using System;
+
+namespace FHL.Data.Models.NHL
 {
     public sealed class PlayerModel
     {
@@ -10,7 +12,13 @@
             }
 
             var info = suggestionStr.Split('|');
-            if (info.Length < 15)
+            if (info.Length != 15)
+            {
+                return null;
+            }
+
+            var position = info[12].Trim();
+            if (position.Length != 1)
             {
                 return null;
             }
@@ -22,7 +30,7 @@
                 FirstName = info[2],
                 LastName = info[1],
                 PlayerLink = info[14],
-                Position = info[12],
+                Position = Convert.ToChar(position),
                 TeamAbbreviation = info[11]
             };
 
@@ -39,7 +47,7 @@
 
         public string PlayerLink { get; set; }
 
-        public string Position { get; set; }
+        public char Position { get; set; }
 
         public string TeamAbbreviation { get; set; }
     }

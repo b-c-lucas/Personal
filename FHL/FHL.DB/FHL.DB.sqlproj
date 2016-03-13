@@ -23,6 +23,7 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <IncludeSchemaNameInFileName>True</IncludeSchemaNameInFileName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -57,13 +58,16 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="NHL" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="NHL.Player.sql" />
-    <Build Include="NHL.sql" />
-    <Build Include="NHL.Team.sql" />
+    <Build Include="NHL\NHL.Player.sql" />
+    <Build Include="NHL\NHL.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FHL.DB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="NHL\NHL.Team.sql" />
   </ItemGroup>
 </Project>

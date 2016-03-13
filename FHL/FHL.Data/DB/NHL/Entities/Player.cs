@@ -1,4 +1,6 @@
-﻿namespace FHL.Data.DB.NHL.Entities
+﻿using System;
+
+namespace FHL.Data.DB.NHL.Entities
 {
     public sealed class Player
     {
@@ -14,6 +16,13 @@
 
         public string Position { get; set; }
 
-        public string TeamAbbreviation { get; set; }
+        public Team Team { get; private set; }
+
+        public int TeamId { get; set; }
+
+        public char GetPositionAsChar()
+        {
+            return Convert.ToChar(this.Position);
+        }
     }
 }

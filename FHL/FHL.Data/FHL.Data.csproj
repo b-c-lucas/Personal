@@ -48,6 +48,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -60,7 +61,6 @@
     <Compile Include="DB\ContextBase.cs" />
     <Compile Include="DB\NHL\Entities\Team.cs" />
     <Compile Include="DB\NHL\Entities\Player.cs" />
-    <Compile Include="DB\NHL\NHLDataInitializer.cs" />
     <Compile Include="DB\NHL\NHLContext.cs" />
     <Compile Include="DB\NHL\Repositories\RepositoryBase.cs" />
     <Compile Include="DB\NHL\Repositories\TeamRepository.cs" />
