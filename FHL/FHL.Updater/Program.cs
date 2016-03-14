@@ -8,7 +8,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FHL.Updater
+namespace FHL.Updater.NHL
 {
     public static class Program
     {

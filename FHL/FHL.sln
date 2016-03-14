@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHL.Data", "FHL.Data\FHL.Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHL.Common", "FHL.Common\FHL.Common.csproj", "{01F8C576-4651-43F8-8F3B-A23410789FA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHL.Updater", "FHL.Updater\FHL.Updater.csproj", "{D18BE67B-BEB6-4DFC-97A0-259BBBC3589D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHL.Updater.NHL", "FHL.Updater\FHL.Updater.NHL.csproj", "{D18BE67B-BEB6-4DFC-97A0-259BBBC3589D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHL.Updater.FHL", "FHL.Updater.FHL\FHL.Updater.FHL.csproj", "{8477D2CF-AD23-4DDF-BD9E-BAAB6F7A9A12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{D18BE67B-BEB6-4DFC-97A0-259BBBC3589D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D18BE67B-BEB6-4DFC-97A0-259BBBC3589D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D18BE67B-BEB6-4DFC-97A0-259BBBC3589D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8477D2CF-AD23-4DDF-BD9E-BAAB6F7A9A12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8477D2CF-AD23-4DDF-BD9E-BAAB6F7A9A12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8477D2CF-AD23-4DDF-BD9E-BAAB6F7A9A12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8477D2CF-AD23-4DDF-BD9E-BAAB6F7A9A12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
