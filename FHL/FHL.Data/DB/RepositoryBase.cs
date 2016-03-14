@@ -4,17 +4,18 @@ using System.Data.Entity;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace FHL.Data.DB.NHL.Repositories
+namespace FHL.Data.DB.Repositories
 {
-    public abstract class RepositoryBase<TEntity>
+    public abstract class RepositoryBase<TContext, TEntity>
+        where TContext : DbContext
         where TEntity : class
     {
-        public RepositoryBase(NHLContext context)
+        public RepositoryBase(TContext context)
         {
             this.Context = context;
         }
 
-        protected NHLContext Context { get; private set; }
+        protected TContext Context { get; private set; }
 
         protected abstract DbSet<TEntity> Set { get; }
 

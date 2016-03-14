@@ -59,10 +59,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB\ContextBase.cs" />
+    <Compile Include="DB\FHL\Entities\Player.cs" />
+    <Compile Include="DB\FHL\Entities\Team.cs" />
+    <Compile Include="DB\FHL\FHLContext.cs" />
+    <Compile Include="DB\FHL\Repositories\FHLRepositoryBase.cs" />
+    <Compile Include="DB\FHL\Repositories\PlayerRepository.cs" />
+    <Compile Include="DB\RepositoryBase.cs" />
+    <Compile Include="DB\FHL\Repositories\TeamRepository.cs" />
     <Compile Include="DB\NHL\Entities\Team.cs" />
     <Compile Include="DB\NHL\Entities\Player.cs" />
     <Compile Include="DB\NHL\NHLContext.cs" />
-    <Compile Include="DB\NHL\Repositories\RepositoryBase.cs" />
+    <Compile Include="DB\NHL\Repositories\NHLRepositoryBase.cs" />
     <Compile Include="DB\NHL\Repositories\TeamRepository.cs" />
     <Compile Include="DB\NHL\Repositories\PlayerRepository.cs" />
     <Compile Include="Models\NHL\CurrentTeam.cs" />

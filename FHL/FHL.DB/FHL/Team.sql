@@ -1,0 +1,8 @@
+﻿CREATE TABLE [FHL].[Team]
+(
+	[Id] INT NOT NULL PRIMARY KEY,
+	[Name] NVARCHAR(100) NOT NULL,
+	[LeagueId] INT NOT NULL
+
+    CONSTRAINT [FK_Team_League] FOREIGN KEY ([LeagueId]) REFERENCES [FHL].[League]([Id])
+)

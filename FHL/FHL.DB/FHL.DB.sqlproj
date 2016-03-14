@@ -59,15 +59,22 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="NHL" />
+    <Folder Include="FHL" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="NHL\NHL.Player.sql" />
+    <Build Include="NHL\Player.sql" />
     <Build Include="NHL\NHL.sql" />
+    <Build Include="FHL\FHL.sql" />
+    <Build Include="FHL\League.sql" />
+    <Build Include="FHL\Team.sql" />
+    <Build Include="FHL\Player.sql" />
+    <Build Include="FHL\Lineup.sql" />
+    <Build Include="FHL\Game.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FHL.DB.publish.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="NHL\NHL.Team.sql" />
+    <Build Include="NHL\Team.sql" />
   </ItemGroup>
 </Project>

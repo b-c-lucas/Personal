@@ -1,0 +1,11 @@
+﻿CREATE TABLE [FHL].[League]
+(
+	[Id] INT NOT NULL PRIMARY KEY,
+	[Name] NVARCHAR(50) NOT NULL,
+	[NumberOfTeams] TINYINT NOT NULL,
+	[RosterSize] TINYINT NOT NULL,
+	[FarmSize] TINYINT NOT NULL DEFAULT 0,
+	[SalaryCap] TINYINT NULL,
+	[TradeDeadlineDateTime] DATETIME NULL,
+	[RosterFreezeDateTime] DATETIME NULL
+)

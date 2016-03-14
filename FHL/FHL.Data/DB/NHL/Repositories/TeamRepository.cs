@@ -3,7 +3,7 @@ using System.Data.Entity;
 
 namespace FHL.Data.DB.NHL.Repositories
 {
-    public sealed class TeamRepository : RepositoryBase<Team>
+    public sealed class TeamRepository : NHLRepositoryBase<Team>
     {
         public TeamRepository(NHLContext context)
             : base(context)

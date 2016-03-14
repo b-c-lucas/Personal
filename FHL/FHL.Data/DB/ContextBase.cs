@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Configuration;
+using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace FHL.Data.DB
@@ -7,8 +8,8 @@ namespace FHL.Data.DB
     {
         protected abstract string Schema { get; }
 
-        public ContextBase(string nameOrConnectionString) 
-            : base(nameOrConnectionString)
+        public ContextBase(string typeName) 
+            : base(ConfigurationManager.ConnectionStrings[typeName + "Connection"].ConnectionString)
         {
         }
 

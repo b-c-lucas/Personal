@@ -1,0 +1,6 @@
+﻿CREATE TABLE [FHL].[Player]
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [NHLId] INT NOT NULL, 
+    CONSTRAINT [FK_FHLPlayer_NHLPlayer] FOREIGN KEY ([NHLId]) REFERENCES [NHL].[Player]([Id])
+)

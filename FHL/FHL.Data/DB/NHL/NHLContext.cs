@@ -1,6 +1,5 @@
 ﻿using FHL.Data.DB.NHL.Entities;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Configuration;
 using System.Data.Entity;
 
 namespace FHL.Data.DB.NHL
@@ -8,7 +7,7 @@ namespace FHL.Data.DB.NHL
     public sealed class NHLContext : ContextBase
     {
         public NHLContext()
-            : base(ConfigurationManager.ConnectionStrings["NHLContextConnection"].ConnectionString)
+            : base(nameof(NHLContext))
         {
         }
 

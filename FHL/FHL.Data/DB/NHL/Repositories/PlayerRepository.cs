@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace FHL.Data.DB.NHL.Repositories
 {
-    public sealed class PlayerRepository : RepositoryBase<Player>
+    public sealed class PlayerRepository : NHLRepositoryBase<Player>
     {
         public PlayerRepository(NHLContext context)
             : base(context)
