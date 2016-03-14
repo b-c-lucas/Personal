@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [NHL].[Team]
 (
-	[Id] INT NOT NULL PRIMARY KEY, 
+	[Id] INT NOT NULL CONSTRAINT [PK_Team] PRIMARY KEY, 
     [Name] NVARCHAR(100) NOT NULL,
     [Abbreviation] NCHAR(3) NOT NULL
 )

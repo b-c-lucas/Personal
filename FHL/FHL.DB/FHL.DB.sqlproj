@@ -70,6 +70,7 @@
     <Build Include="FHL\Player.sql" />
     <Build Include="FHL\Lineup.sql" />
     <Build Include="FHL\Game.sql" />
+    <Build Include="FHL\Season.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FHL.DB.publish.xml" />

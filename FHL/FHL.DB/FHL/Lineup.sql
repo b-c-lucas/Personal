@@ -1,6 +1,7 @@
 ﻿CREATE TABLE [FHL].[Lineup]
 (
-	[Id] INT NOT NULL PRIMARY KEY,
+	[Id] INT NOT NULL  CONSTRAINT [PK_Lineup] PRIMARY KEY,
+	[GameId] INT NOT NULL,
 	[TeamId] INT NOT NULL, 
 	[Score] TINYINT NULL,
 	[Forward1Id] INT NULL,
@@ -13,7 +14,8 @@
 	[Defenceman2Id] INT NULL,
 	[Defenceman3Id] INT NULL,
 	[Defenceman4Id] INT NULL,
-
+	
+	CONSTRAINT [FK_Lineup_Game] FOREIGN KEY ([GameId]) REFERENCES [FHL].[Game]([Id]),
 	CONSTRAINT [FK_Lineup_Team] FOREIGN KEY ([TeamId]) REFERENCES [FHL].[Team]([Id]),
 
 	CONSTRAINT [FK_Lineup_Player_F1] FOREIGN KEY ([Forward1Id]) REFERENCES [FHL].[Player]([Id]),

@@ -117,7 +117,15 @@ namespace FHL.Data.Models.NHL
     {
         public IEnumerable<Game> Games
         {
-            get { return this.dates == null ? null : this.dates.Where(d => d != null).SelectMany(d => d.games).Where(g => g != null); }
+            get
+            {
+                return this.dates == null 
+                    ? null 
+                    : this.dates
+                        .Where(d => d != null)
+                        .SelectMany(d => d.games)
+                        .Where(g => g != null);
+            }
         }
 
         public string copyright { get; set; }
