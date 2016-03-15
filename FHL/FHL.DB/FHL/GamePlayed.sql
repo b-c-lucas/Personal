@@ -1,0 +1,13 @@
+﻿CREATE TABLE [FHL].[GamePlayed]
+(
+	[Id] INT NOT NULL IDENTITY(1,1) CONSTRAINT [PK_GamePlayed] PRIMARY KEY,
+	
+	[PlayerId] INT NOT NULL
+		CONSTRAINT [FK_GamePlayed_Player] FOREIGN KEY ([LineupId]) REFERENCES [FHL].[Player]([Id]),
+	[LineupId] INT NOT NULL
+		CONSTRAINT [FK_GamePlayed_Lineup] FOREIGN KEY ([LineupId]) REFERENCES [FHL].[Lineup]([Id]),
+
+	[Goals] TINYINT NOT NULL DEFAULT 0,
+	[Assists] TINYINT NOT NULL DEFAULT 0,
+	[TotalScore] TINYINT NOT NULL DEFAULT 0    
+)

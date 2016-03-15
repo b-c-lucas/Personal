@@ -1,0 +1,77 @@
+﻿@using FHL.Data.DB.FHL.Entities
+@model League
+@{
+    this.ViewBag.Title = "Add League";
+}
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>League</legend>
+        <div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Name)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Name)
+            </div>
+        </div>
+        <div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.RosterSize)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.RosterSize)
+            </div>
+        </div>
+        <div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.FarmSize)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.FarmSize)
+            </div>
+        </div>
+        <div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.MaxNumberOfTeams)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.MaxNumberOfTeams)
+            </div>
+        </div>
+        <div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.NumberOfPlayoffRounds)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.NumberOfPlayoffRounds)
+            </div>
+        </div>
+        <div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.SalaryCap)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.SalaryCap)
+            </div>
+        </div>
+        <div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.TradeDeadlineDateTime)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.TradeDeadlineDateTime)
+            </div>
+        </div>
+        <div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.RosterFreezeDateTime)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.RosterFreezeDateTime)
+            </div>
+        </div>
+        <input type="submit" value="Add League" />
+    </fieldset>
+}

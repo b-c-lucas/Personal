@@ -8,7 +8,7 @@ namespace FHL.Data.DB.Repositories
 {
     public abstract class RepositoryBase<TContext, TEntity>
         where TContext : DbContext
-        where TEntity : class
+        where TEntity : EntityBase
     {
         public RepositoryBase(TContext context)
         {

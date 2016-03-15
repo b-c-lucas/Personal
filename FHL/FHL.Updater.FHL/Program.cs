@@ -1,5 +1,6 @@
 ﻿using FHL.Common;
 using FHL.Data.DB.FHL;
+using FHL.Data.DB.FHL.Repositories;
 using FHL.Data.Models.NHL;
 using FHL.Data.Services.NHL;
 using System.Collections.Generic;
@@ -15,24 +16,30 @@ namespace FHL.Updater.FHL
         {
             Database.SetInitializer<FHLContext>(null);
 
-            //using (var context = new FHLContext())
-            //{
-            //    var teamRepository = new TeamRepository(context);
-            //    var playerRepository = new PlayerRepository(context);
-            //}
+            using (var context = new FHLContext())
+            {
+                var leagueRepository = new LeagueRepository(context);
+                var seasonRepository = new SeasonRepository(context);
+                var gameRepository = new GameRepository(context);
 
-            AsyncHelpers.RunSync(() => UpdateGames());
+                AsyncHelpers.RunSync(() => BuildLeagueSchedules(leagueRepository, seasonRepository, gameRepository));
+            }            
         }
 
-        private static async Task UpdateGames()
+        private static async Task BuildLeagueSchedules(
+            LeagueRepository leagueRepository,
+            SeasonRepository seasonRepository,
+            GameRepository gameRepository)
         {
+            var leagues = await leagueRepository.ToListAsync();
+            
+            var games = await new ScheduleService().GetAllGamesAsync();
+
             var regularSeasonGames = new List<KeyValuePair<string, Game[]>>(82);
             var firstRoundGames = new List<KeyValuePair<string, Game[]>>(7);
             var secondRoundGames = new List<KeyValuePair<string, Game[]>>(7);
             var thirdRoundGames = new List<KeyValuePair<string, Game[]>>(7);
             var fourthRoundGames = new List<KeyValuePair<string, Game[]>>(7);
-
-            var games = await new ScheduleService().GetAllGamesAsync();
 
             foreach (var game in games.Where(g => g.Value.Length >= 6))
             {

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="374a0d9c-c3fb-4f54-8912-ac8201c767e9" ChangeDateTime="03/15/2016 04:52:33">
+    <Property Name="ElementName" Value="[FHL].[League].[NumberOfTeams]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[FHL].[League]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MaxNumberOfTeams" />
+  </Operation>
+</Operations>

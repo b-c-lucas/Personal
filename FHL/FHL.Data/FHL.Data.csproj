@@ -43,7 +43,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -59,13 +59,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB\ContextBase.cs" />
+    <Compile Include="DB\FHL\Entities\Conference.cs" />
+    <Compile Include="DB\FHL\Entities\Lineup.cs" />
+    <Compile Include="DB\FHL\Entities\GamePlayed.cs" />
     <Compile Include="DB\FHL\Entities\GameType.cs" />
     <Compile Include="DB\FHL\Entities\Game.cs" />
+    <Compile Include="DB\FHL\Entities\FHLEntityBase.cs" />
+    <Compile Include="DB\FHL\Entities\Season.cs" />
     <Compile Include="DB\FHL\Entities\Player.cs" />
+    <Compile Include="DB\FHL\Entities\League.cs" />
     <Compile Include="DB\FHL\Entities\Team.cs" />
+    <Compile Include="DB\EntityBase.cs" />
     <Compile Include="DB\FHL\FHLContext.cs" />
     <Compile Include="DB\FHL\Repositories\FHLRepositoryBase.cs" />
+    <Compile Include="DB\FHL\Repositories\ConferenceRepository.cs" />
+    <Compile Include="DB\FHL\Repositories\GamesPlayedRepository.cs" />
+    <Compile Include="DB\FHL\Repositories\GameRepository.cs" />
+    <Compile Include="DB\FHL\Repositories\LineupRepository.cs" />
+    <Compile Include="DB\FHL\Repositories\LeagueRepository.cs" />
+    <Compile Include="DB\FHL\Repositories\SeasonRepository.cs" />
     <Compile Include="DB\FHL\Repositories\PlayerRepository.cs" />
+    <Compile Include="DB\NHL\Entities\NHLEntityBase.cs" />
     <Compile Include="DB\RepositoryBase.cs" />
     <Compile Include="DB\FHL\Repositories\TeamRepository.cs" />
     <Compile Include="DB\NHL\Entities\Team.cs" />

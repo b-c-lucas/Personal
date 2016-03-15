@@ -71,11 +71,16 @@
     <Build Include="FHL\Lineup.sql" />
     <Build Include="FHL\Game.sql" />
     <Build Include="FHL\Season.sql" />
+    <Build Include="FHL\GamePlayed.sql" />
+    <Build Include="FHL\Conference.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FHL.DB.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="NHL\Team.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="FHL.DB.refactorlog" />
   </ItemGroup>
 </Project>

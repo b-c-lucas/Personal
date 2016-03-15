@@ -1,5 +1,6 @@
 ﻿using System.Configuration;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace FHL.Data.DB
@@ -24,6 +25,6 @@ namespace FHL.Data.DB
             this.BuildModels(modelBuilder);
 
             base.OnModelCreating(modelBuilder);
-        }        
+        }
     }
 }
